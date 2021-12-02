@@ -9,8 +9,7 @@ def head(input_list):
       >>> head(['Jan', 'Feb', 'Mar'])
       'Jan'
     """
-
-    return None
+    return input_list[0]
 
 
 def tail(input_list):
@@ -23,7 +22,7 @@ def tail(input_list):
 
     """
 
-    return []
+    return input_list[1:]
 
 
 def last(input_list):
@@ -36,7 +35,7 @@ def last(input_list):
 
     """
 
-    return []
+    return input_list[-1]
 
 
 def top(input_list):
@@ -49,7 +48,7 @@ def top(input_list):
 
     """
 
-    return []
+    return input_list[:-1]
 
 
 def first_three(input_list):
@@ -62,7 +61,7 @@ def first_three(input_list):
 
     """
 
-    return []
+    return input_list[:3]
 
 
 def last_five(input_list):
@@ -75,7 +74,7 @@ def last_five(input_list):
 
     """
 
-    return []
+    return input_list[-5:]
 
 
 def middle(input_list):
@@ -87,8 +86,8 @@ def middle(input_list):
     [6, 9, 12, 15, 18, 21]
 
     """
-
-    return []
+    
+    return input_list[2:-2]
 
 
 def inner_four(input_list):
@@ -100,8 +99,8 @@ def inner_four(input_list):
     [6, 9, 12, 15]
 
     """
-
-    return []
+    
+    return input_list[2:6]
 
 
 def inner_four_end(input_list):
@@ -117,7 +116,7 @@ def inner_four_end(input_list):
 
     """
 
-    return []
+    return input_list[-6:-2]
 
 
 def replace_head(input_list):
@@ -131,8 +130,8 @@ def replace_head(input_list):
     True
 
     """
-
-    pass
+    input_list[0] = 42
+    
 
 
 def replace_third_and_last(input_list):
@@ -146,9 +145,9 @@ def replace_third_and_last(input_list):
     True
 
     """
-
-    pass
-
+    input_list[2], input_list[-1] = 37, 37
+    
+   
 
 def replace_middle(input_list):
     """Replace all elements of a list but the first two and last two with 42 and 37.
@@ -165,9 +164,8 @@ def replace_middle(input_list):
     True
 
     """
-
-    pass
-
+    input_list[2:-2] = [42, 37]
+    
 
 def delete_third_and_seventh(input_list):
     """Remove third and seventh elements of input_list and return nothing.
@@ -180,9 +178,10 @@ def delete_third_and_seventh(input_list):
     True
 
     """
+    del input_list[2]
+    del input_list[5]
 
-    pass
-
+   
 
 def delete_middle(input_list):
     """Remove all elements from input_list except the first two and last two.
@@ -198,7 +197,7 @@ def delete_middle(input_list):
 
     """
 
-    pass
+    input_list[2:-2] = []
 
 
 # This is the part were we actually run the doctests.
